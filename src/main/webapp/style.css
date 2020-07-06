@@ -1,2 +1,40 @@
 
 
+body{
+    background-color:#696969;
+    color:white;
+    
+}
+
+heaeder{
+    width:100%;
+    padding:10px;
+    margin:10px;
+    float:none;
+    background-color:#404040;
+    text-align:center;
+    
+}
+
+
+#main{
+    overflow:hidden;
+}
+aside{
+    margin:10px;
+    background-color:#404040;
+    width:25%;
+    float:left;
+    text-align:center;
+}
+
+main{
+    margin:10px;
+    width:75%;
+    float:left;
+    text-align:center;
+}
+
+.article{
+    background-color:#404040;
+}
