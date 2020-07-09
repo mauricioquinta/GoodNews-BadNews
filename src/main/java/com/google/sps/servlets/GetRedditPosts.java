@@ -47,8 +47,10 @@ public class GetRedditPosts extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
 
-    //Make 
+    //Make the HTTP Request client, this will let us make HTTP POST Requests
     OkHttpClient client = new OkHttpClient();
+
+    //Make the request to r/wholesomenews and store the list of posts in an array
     Request req = new Request.Builder()
     .url("https://www.reddit.com/r/wholesomenews/best/.json")
     .method("GET", null)
@@ -64,6 +66,7 @@ public class GetRedditPosts extends HttpServlet {
 
     JsonArray wholesomeNews = convertedObject.getAsJsonObject("data").getAsJsonArray("children");
 
+    //Make the request to r/news and store the list of posts in an array
     req = new Request.Builder()
     .url("https://www.reddit.com/r/news/best/.json")
     .method("GET", null)
@@ -79,10 +82,9 @@ public class GetRedditPosts extends HttpServlet {
 
     JsonArray regularNews =  convertedObject.getAsJsonObject("data").getAsJsonArray("children");
 
-    JsonArray combined = new JsonArray();
 
-    System.out.println(wholesomeNews.size());
-    System.out.println(regularNews.size());
+    //Combine the two arrays alternating good and regular news posts
+    JsonArray combined = new JsonArray();
 
     for(int i = 0; i < Math.min(regularNews.size(),wholesomeNews.size()); i++){
         combined.add(wholesomeNews.get(i));
@@ -90,10 +92,7 @@ public class GetRedditPosts extends HttpServlet {
     }
 
 
-
-    System.out.println(combined);
-
-
+    //Return the combined list as json to the calling client
     Gson gson = new Gson();
     String json = gson.toJson(combined);
     response.setContentType("text/html;");
