@@ -6,7 +6,7 @@ body{
     
 }
 
-heaeder{
+header{
     width:100%;
     padding:10px;
     margin:10px;
@@ -23,14 +23,14 @@ heaeder{
 aside{
     margin:10px;
     background-color:#404040;
-    width:25%;
+    width:20%;
     float:left;
     text-align:center;
 }
 
 main{
     margin:10px;
-    width:75%;
+    width:74%;
     float:left;
     text-align:center;
 }
