@@ -17,6 +17,18 @@ header{
 }
 
 
+#topLow{
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-top:15xp;
+    margin-bottom:15px;
+    background-color:#404040;
+    border-style:solid;
+    border-width:3px;
+    border-color:white;
+    border-radius:8px;
+}
+
 #main{
     overflow:hidden;
 }
@@ -30,11 +42,40 @@ aside{
 
 main{
     margin:10px;
-    width:74%;
+    width:70%;
     float:left;
     text-align:center;
 }
 
 .article{
     background-color:#404040;
+}
+
+.postBox{
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-top:15xp;
+    margin-bottom:15px;
+    background-color:#404040;
+    border-style:solid;
+    border-width:3px;
+    border-color:white;
+    border-radius:8px;
+}
+.artFoot{
+    overflow:hidden;
+}
+.date{
+    float:left;
+    width:40%;
+}
+.subreddit{
+    float:right;
+    width:40%
+}
+
+.artImg{
+   
+    
+    
 }
