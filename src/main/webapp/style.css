@@ -3,24 +3,53 @@
 body{
     background-color:#696969;
     color:white;
-    
+    margin: 0px;
 }
 
-header{
+.header{
     width:100%;
-    padding:10px;
-    margin:10px;
+    height:45px;
+    padding:2px;
+    float:none;
+    background-color:#404040;
+    font-family: 'Amiri';font-size: 25px;
+}
+#h1{
+    float:left;
+    width:38%;
+    text-align:left;
+    padding:4px;
+   
+}
+#h2{
+    float:right;
+    width:19%;
+    text-align:right;
+    padding-right:8px;
+}
+#h3{
+    float:right;
+    width:19%;
+    text-align:right;
+    padding-right:8px;
+    margin: 0px;
+    padding:10px 0px 10px 0px;
     float:none;
     background-color:#404040;
     text-align:center;
+    font-family: 'Lora', serif;
     
 }
+
+
+
+
 
 
 #topLow{
     padding-top:15px;
     padding-bottom:15px;
-    margin-top:15xp;
+    margin-top:15px;
     margin-bottom:15px;
     background-color:#404040;
     border-style:solid;
@@ -47,13 +76,28 @@ main{
     text-align:center;
 }
 
-.article{
+.postBox{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-left: 10px;
+    border-right-width: 10px;
     background-color:#404040;
 }
 
+.postBox figure {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.postBox figure img{
+    width: 100%;
+}
+
 .postBox{
-    padding-top:15px;
-    padding-bottom:15px;
+    height:130px;
+    padding-top:5px;
+    padding-bottom:5px;
     margin-top:15xp;
     margin-bottom:15px;
     background-color:#404040;
@@ -61,21 +105,84 @@ main{
     border-width:3px;
     border-color:white;
     border-radius:8px;
+    
+}
+#leftHead{
+    width:100%
+}
+.artImg{   
+    float:left;
+    width:20%;
+    height:80px;
+    border-style:solid;
+    border-width:1px;
+    border-color:white;
+    border-radius:3px;
+    margin:10px;
+}
+
+.txtPost{
+    overflow:hidden;
+    width:75%;
+    float:left;
+    text-align:left;
+    
 }
 .artFoot{
-    overflow:hidden;
+    
 }
 .date{
+    font-family: 'Merriweather Sans', sans-serif;
     float:left;
-    width:40%;
+    width:fit-content;
+    margin-left:8px;
 }
 .subreddit{
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
     float:right;
-    width:40%
+    width:fit-content;
+    margin-right:8px;
+}
+
+
+.postTitle{
+    font-family: 'Lora', serif;
+    grid-column-start: 1;
+    align-self: center;
+}
+
+.postSnip{
+    font-family: 'Merriweather Sans', sans-serif;
+    grid-column-start: 1;
+}
+
+#topGood h3{
+    font-family: 'Lora', serif;
+}
+
+#topGood p {
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+#lowBad h3{
+    font-family: 'Lora', serif;
+}
+
+#lowBad p {
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+#tgSnip{
+    max-width: 230px;
+    margin-left: calc((100% - 230px)/2);
+}
+
+#lbSnip{
+    max-width: 230px;
+    margin-left: calc((100% - 230px)/2);
 }
 
 .artImg{
-   
-    
     
 }
